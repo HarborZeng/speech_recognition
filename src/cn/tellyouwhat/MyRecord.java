@@ -45,12 +45,6 @@ public class MyRecord extends JFrame implements ActionListener {
         myRecord.setResizable(false);
     }
 
-
-    @Override
-    public synchronized FocusListener[] getFocusListeners() {
-        return new FocusListener[]{};
-    }
-
     //构造函数
     public MyRecord() {
         //组件初始化
@@ -212,7 +206,7 @@ public class MyRecord extends JFrame implements ActionListener {
 
     //保存录音
     private void save() {
-        captureBtn.setText("保存中");
+        jLabel.setText("保存中");
         //取得录音输入流
         audioFormat = getAudioFormat();
 
